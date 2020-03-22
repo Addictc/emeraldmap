@@ -1,4 +1,4 @@
-# porymap
+# emeraldmap
 An attempt at making an interactive map for pokemon emerald based on huderlem/porymap
 
 
