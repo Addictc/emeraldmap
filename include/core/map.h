@@ -57,10 +57,9 @@ public:
     static QString bgEventsLabelFromName(QString mapName);
     int getWidth();
     int getHeight();
-    QPixmap render(bool ignoreCache, MapLayout * fromLayout = nullptr);
+    QPixmap render(bool ignoreCache);
     QPixmap renderCollision(qreal opacity, bool ignoreCache);
-    bool mapBlockChanged(int i, Blockdata * cache);
-    bool borderBlockChanged(int i, Blockdata * cache);
+    bool blockChanged(int, Blockdata*);
     void cacheBlockdata();
     void cacheCollision();
     Block *getBlock(int x, int y);
@@ -75,7 +74,7 @@ public:
     QList<Event*> getAllEvents();
     void removeEvent(Event*);
     void addEvent(Event*);
-    QPixmap renderConnection(MapConnection, MapLayout *);
+    QPixmap renderConnection(MapConnection);
     QPixmap renderBorder();
     void setDimensions(int newWidth, int newHeight, bool setNewBlockData = true);
     void cacheBorder();
